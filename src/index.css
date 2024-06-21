@@ -1,0 +1,44 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.parallax {
+  will-change: transform;
+  animation: move 10s infinite alternate;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(20px) scale(1.1);
+  }
+}
+
+.border-gradient {
+  border-width: 2px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #7F00FF, #E100FF, #FFA500); /* Purple at the top, orange at the bottom */
+  border-radius: 1rem; 
+}
+.border-gradient1 {
+  border-width: 10px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #7F00FF, #E100FF); /* Purple at the top, orange at the bottom */
+  border-radius: 1rem; 
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #7F00FF, #FFA500); /* Purple on the left, orange on the right */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
